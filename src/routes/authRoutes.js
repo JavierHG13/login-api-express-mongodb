@@ -1,10 +1,11 @@
-const express = require('express');
+import express from 'express';
+import User from '../models/User.js';
+import bcrypt from 'bcryptjs';
+import jwt from 'jsonwebtoken';
+import passport from 'passport';
+import { enviarCodigoDeVerificacion } from '../services/notificationService.js';
+
 const router = express.Router();
-const User = require('../models/User');
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
-const passport = require('passport');
-const { enviarCodigoDeVerificacion } = require('../services/notificationService');
 
 // --- RUTA: POST /api/auth/register ---
 router.post('/register', async (req, res) => {
@@ -354,4 +355,4 @@ router.post('/resend-verification', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router

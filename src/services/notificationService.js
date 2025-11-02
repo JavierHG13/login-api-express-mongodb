@@ -1,5 +1,5 @@
 // server/src/services/notificationService.js
-const nodemailer = require('nodemailer');
+import nodemailer from 'nodemailer'
 
 // --- Configuración de Nodemailer (Gmail) ---
 const transporter = nodemailer.createTransport({
@@ -11,7 +11,7 @@ const transporter = nodemailer.createTransport({
 });
 
 // --- Función para enviar el CÓDIGO ---
-const enviarCodigoDeVerificacion = async (correo, codigo) => {
+export const enviarCodigoDeVerificacion = async (correo, codigo) => {
   const mensaje = `Tu código de verificación para ${process.env.FRONTEND_URL} es: ${codigo}. Es válido por 10 minutos.`;
 
   try {
@@ -28,4 +28,3 @@ const enviarCodigoDeVerificacion = async (correo, codigo) => {
   }
 };
 
-module.exports = { enviarCodigoDeVerificacion };
