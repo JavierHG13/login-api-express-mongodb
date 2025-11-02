@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(passport.initialize());
 
 // Importar rutas
-const authRoutes = require('./routes/authRoutes');
+const authRoutes = require('.src/routes/authRoutes');
 app.use('/api/auth', authRoutes);
 
 // Conexión a MongoDB
