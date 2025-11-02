@@ -1,0 +1,7 @@
+# Ignorar carpetas de dependencias
+node_modules
+client/node_modules
+server/node_modules
+
+# Ignorar archivos de secretos
+.env
