@@ -13,7 +13,7 @@ const app = express();
 // Configuración CORS para producción
 app.use(cors({
   origin: [
-    'https://milogino.netlify.app', // Tu dominio de Netlify
+    'https://air-design.netlify.app', // Tu dominio de Netlify
     'http://localhost:3000',        // Desarrollo local
     'http://localhost:5173'         // Vite development
   ],
