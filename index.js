@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import passport from 'passport';
 import dotenv from 'dotenv';
-
+import './src/utils/passport-google-strategy.js'
 import authRoutes from './src/routes/authRoutes.js';
 
 dotenv.config();
